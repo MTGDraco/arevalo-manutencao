@@ -1,52 +1,61 @@
 const translations = {
     pt: {
-        "hero-title": "Venda, Reforma e Manutenção de Equipamentos Gastronômicos",
-        "hero-desc": "Especialistas em São Paulo. Soluções completas para padarias, restaurantes e açougues. Qualidade e rapidez para o seu negócio não parar.",
-        "btn-contact": "Solicite um Orçamento (WhatsApp)",
-        "services-title": "Nossas Especialidades",
-        "services-subtitle": "Trabalhamos com conserto, reforma completa e venda dos seguintes equipamentos:",
-        "eq-1": "Amassadeiras e Cilindros",
-        "eq-2": "Modeladoras de Pão",
-        "eq-3": "Fornos Industriais",
-        "eq-4": "Batedeiras Planetárias",
-        "eq-5": "Moedores de Carne",
-        "eq-6": "Fatiadores de Frios",
-        "location-title": "Onde Estamos",
-        "location-desc": "Venha conhecer nossa oficina ou agende uma visita técnica. Atendemos toda a região metropolitana de São Paulo.",
-        "loc-address-label": "Endereço:",
-        "loc-hours-label": "Horário:",
-        "loc-hours-text": "Segunda a Sexta: 08:00 às 18:00 | Sábado: 08:00 às 12:00",
-        "loc-phone-label": "Contato:",
-        "footer-text": "© 2026 Arevalo Manutenção - São Paulo, SP. Todos os direitos reservados."
+        nav_home: "Início",
+        nav_services: "Serviços",
+        nav_products: "Produtos",
+        nav_contact: "Contato",
+
+        hero_title: "Venda, Reforma e Manutenção de Equipamentos Gastronômicos",
+        hero_desc: "Especialistas em São Paulo. Soluções completas para padarias, restaurantes e açougues.",
+        hero_btn: "Solicite um Orçamento no WhatsApp",
+
+        services_title: "Nossas Especialidades",
+        services_subtitle: "Trabalhamos com conserto, reforma completa e venda dos seguintes equipamentos:",
+
+        location_title: "Onde Estamos",
+        location_desc: "Venha conhecer nossa oficina ou agende uma visita técnica.",
+        footer_text: "© 2026 Arevalo Manutenção - São Paulo, SP"
     },
+
     es: {
-        "hero-title": "Venta, Restauración y Mantenimiento de Equipamiento Gastronómico",
-        "hero-desc": "Especialistas en São Paulo. Soluciones completas para panaderías, restaurantes y carnicerías. Calidad y rapidez para que tu negocio no se detenga.",
-        "btn-contact": "Solicita un Presupuesto (WhatsApp)",
-        "services-title": "Nuestras Especialidades",
-        "services-subtitle": "Trabajamos con reparación, restauración completa y venta de los siguientes equipos:",
-        "eq-1": "Amasadoras y Cilindros",
-        "eq-2": "Modeladoras de Pan",
-        "eq-3": "Hornos Industriales",
-        "eq-4": "Batidoras Planetarias",
-        "eq-5": "Molinos de Carne",
-        "eq-6": "Cortadoras de Fiambre",
-        "location-title": "Dónde Estamos",
-        "location-desc": "Ven a conocer nuestro taller o programa una visita técnica. Atendemos toda la región metropolitana de São Paulo.",
-        "loc-address-label": "Dirección:",
-        "loc-hours-label": "Horario:",
-        "loc-hours-text": "Lunes a Viernes: 08:00 a 18:00 | Sábado: 08:00 a 12:00",
-        "loc-phone-label": "Contacto:",
-        "footer-text": "© 2026 Arevalo Manutenção - São Paulo, SP. Todos los derechos reservados."
+        nav_home: "Inicio",
+        nav_services: "Servicios",
+        nav_products: "Productos",
+        nav_contact: "Contacto",
+
+        hero_title: "Venta, Reparación y Mantenimiento de Equipos Gastronómicos",
+        hero_desc: "Especialistas en São Paulo. Soluciones completas para panaderías y restaurantes.",
+        hero_btn: "Solicita un Presupuesto por WhatsApp",
+
+        services_title: "Nuestras Especialidades",
+        services_subtitle: "Trabajamos con reparación, restauración y venta de equipos:",
+
+        location_title: "Dónde Estamos",
+        location_desc: "Visítanos o agenda una visita técnica.",
+        footer_text: "© 2026 Arevalo Manutenção - São Paulo, SP"
     }
 };
 
 function changeLanguage(lang) {
-    for (let key in translations[lang]) {
-        const element = document.getElementById(key);
-        if (element) {
-            element.innerText = translations[lang][key];
+    localStorage.setItem("lang", lang);
+
+    document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
         }
-    }
+    });
+
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'es';
+}
+
+/* Cargar idioma guardado */
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("lang") || "pt";
+    changeLanguage(savedLang);
+});
+
+/* MENU MOBILE */
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
 }
