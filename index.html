@@ -2,168 +2,228 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO -->
-    <title>Arevalo Manutenção | Conserto de Equipamentos em SP</title>
-    <meta name="description" content="Especialistas em conserto, reforma e venda de amassadeiras, fornos e equipamentos gastronômicos em São Paulo.">
-    <meta name="keywords" content="conserto de maseira, manutenção de fornos industriais, equipamentos gastronomicos, São Paulo">
+    <title>Arevalo Manutenção | Conserto de Equipamentos Gastronômicos</title>
+    <meta name="description" content="Especialistas em conserto, reforma e venda de amassadeiras, fornos e equipamentos gastronômicos em São Paulo. Representamos G.Paniz, Skymsen e mais.">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Botão WhatsApp -->
-    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank">
-        <span>WhatsApp</span>
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+         <span data-i18n="wa_float">WhatsApp</span>
     </a>
 
     <!-- Navbar -->
    <header class="navbar">
     <div class="nav-container">
-
         <div class="logo">
-            <span class="logo-icon">⚙️</span>
-            <div class="logo-text">
-                <strong>Arevalo</strong>
-                <span>Manutenção</span>
-            </div>
-        </div>
+    <img src="logo/Logo.png" alt="Arevalo Manutenção" class="logo-img">
 
-        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <div class="logo-text">
+        <strong>Arevalo</strong>
+        <span data-i18n="logo_sub">Manutenção</span>
+    </div>
+</div>
+        <div class="nav-actions-mobile">
+            <div class="lang-switch mobile-only">
+                <button onclick="changeLanguage('pt')">🇧🇷</button>
+                <button onclick="changeLanguage('es')">🇪🇸</button>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </div>
 
         <nav class="nav-links" id="navLinks">
             <a href="#" data-i18n="nav_home">Início</a>
             <a href="#services" data-i18n="nav_services">Serviços</a>
             <a href="#products" data-i18n="nav_products">Produtos</a>
+            <a href="#gallery" data-i18n="nav_gallery">Estrutura</a>
             <a href="#location" data-i18n="nav_contact">Contato</a>
         </nav>
 
-        <div class="nav-actions">
+        <div class="nav-actions desktop-only">
             <div class="lang-switch">
                 <button onclick="changeLanguage('pt')">🇧🇷</button>
                 <button onclick="changeLanguage('es')">🇪🇸</button>
             </div>
         </div>
-
     </div>
 </header>
 
-  <!-- HERO -->
+<!-- HERO -->
 <section class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-        <h1 data-i18n="hero_title">
-            Venda, Reforma e Manutenção de Equipamentos Gastronômicos
-        </h1>
-        <p data-i18n="hero_desc">
-            Especialistas em São Paulo. Soluções completas para padarias, restaurantes e açougues.
-        </p>
-        <a href="https://wa.me/5511999999999" class="btn-primary" data-i18n="hero_btn">
-            Solicite um Orçamento no WhatsApp
+        <span class="hero-badge" data-i18n="hero_badge">Especialistas Autorizados</span>
+        <h1 data-i18n="hero_title">Venda e Manutenção de Equipamentos Gastronômicos</h1>
+        <p data-i18n="hero_desc">Soluções completas para padarias, restaurantes e açougues. Trabalhamos com as melhores marcas do mercado.</p>
+        <a href="https://wa.me/5511999999999" class="btn-primary">
+            💬 <span data-i18n="hero_btn">Solicite um Orçamento</span>
         </a>
+    </div>
+</section>
+
+<!-- MARCAS (Novo) -->
+<section class="brands">
+    <p data-i18n="brands_title">Trabalhamos com as melhores marcas:</p>
+    <div class="brands-scroll">
+        <span>G.Paniz</span>
+        <span>Skymsen</span>
+        <span>Venâncio</span>
+        <span>Gastromaq</span>
+        <span>Braesi</span>
+        <span>Progás</span>
     </div>
 </section>
 
 <!-- SERVIÇOS -->
 <section class="services" id="services">
     <h2 data-i18n="services_title">Nossas Especialidades</h2>
-    <p class="subtitle" data-i18n="services_subtitle">
-        Trabalhamos com conserto e venda de equipamentos
-    </p>
+    <p class="subtitle" data-i18n="services_subtitle">Assistência técnica ágil e de qualidade</p>
 
     <div class="grid-container">
-        <div class="card"><h3>Amassadeiras e Cilindros</h3></div>
-        <div class="card"><h3>Modeladoras de Pão</h3></div>
-        <div class="card"><h3>Fornos Industriais</h3></div>
-        <div class="card"><h3>Batedeiras Planetárias</h3></div>
-        <div class="card"><h3>Moedores de Carne</h3></div>
-        <div class="card"><h3>Fatiadores</h3></div>
+        <div class="card"><div class="card-icon">🥖</div><h3 data-i18n="srv_1">Amassadeiras e Cilindros</h3></div>
+        <div class="card"><div class="card-icon">🥐</div><h3 data-i18n="srv_2">Modeladoras de Pão</h3></div>
+        <div class="card"><div class="card-icon">🔥</div><h3 data-i18n="srv_3">Fornos Industriais</h3></div>
+        <div class="card"><div class="card-icon">🎂</div><h3 data-i18n="srv_4">Batedeiras Planetárias</h3></div>
+        <div class="card"><div class="card-icon">🥩</div><h3 data-i18n="srv_5">Moedores e Fatiadores</h3></div>
     </div>
 </section>
 
 <!-- PRODUTOS -->
 <section class="products" id="products">
     <div class="section-head">
-        <span class="section-kicker">Venda</span>
-        <h2 data-i18n="nav_products">Produtos</h2>
-        <p>Equipamentos revisados e prontos para entrega</p>
+        <span class="section-kicker" data-i18n="prod_kicker">Catálogo</span>
+        <h2 data-i18n="nav_products">Equipamentos à Venda</h2>
+        <p data-i18n="prod_subtitle" class="subtitle">Equipamentos revisados, com garantia e prontos para uso</p>
     </div>
 
-    <div class="product-grid">
-
+    <!-- Contenedor con Scroll Horizontal en móviles -->
+    <div class="product-grid swipe-mobile">
+        
+        <!-- Producto 1 -->
         <div class="product-card">
-            <span class="product-badge">Top</span>
-            <h3>Amassadeira 15kg</h3>
-            <p>Alta performance para produção média.</p>
-            <a href="https://wa.me/5511999999999" class="btn-whatsapp-product">
-                WhatsApp
-            </a>
+            <div class="product-img">
+                <span class="product-brand">G.Paniz</span>
+                <span class="product-badge badge-blue" data-i18n="badge_top">Mais Vendido</span>
+                <img src="https://images.unsplash.com/photo-1590846406792-0adc7f928f1d?auto=format&fit=crop&w=500&q=80" alt="Amassadeira">
+            </div>
+            <div class="product-body">
+                <h3 data-i18n="prod_1_title">Amassadeira Rápida 15kg</h3>
+                <p data-i18n="prod_1_desc">Alta performance para produção de massas pesadas. Totalmente revisada.</p>
+                <a href="https://wa.me/5511999999999" class="btn-outline-whatsapp">
+                    <span data-i18n="btn_consult">Consultar Valor</span> ➔
+                </a>
+            </div>
         </div>
 
+        <!-- Producto 2 -->
         <div class="product-card">
-            <span class="product-badge badge-yellow">Novo</span>
-            <h3>Forno Industrial</h3>
-            <p>Controle preciso de temperatura.</p>
-            <a href="https://wa.me/5511999999999" class="btn-whatsapp-product">
-                WhatsApp
-            </a>
+            <div class="product-img">
+                <span class="product-brand">Venâncio</span>
+                <span class="product-badge badge-yellow" data-i18n="badge_new">Novo</span>
+                <img src="https://images.unsplash.com/photo-1584285458129-a1d293d07e60?auto=format&fit=crop&w=500&q=80" alt="Forno Industrial">
+            </div>
+            <div class="product-body">
+                <h3 data-i18n="prod_2_title">Forno Turbo a Gás</h3>
+                <p data-i18n="prod_2_desc">Controle preciso de temperatura. Ideal para pão francês e confeitaria.</p>
+                <a href="https://wa.me/5511999999999" class="btn-outline-whatsapp">
+                    <span data-i18n="btn_consult">Consultar Valor</span> ➔
+                </a>
+            </div>
         </div>
 
+        <!-- Producto 3 -->
         <div class="product-card">
-            <span class="product-badge badge-green">Entrega</span>
-            <h3>Batedeira</h3>
-            <p>Ideal para massas leves.</p>
-            <a href="https://wa.me/5511999999999" class="btn-whatsapp-product">
-                WhatsApp
-            </a>
+            <div class="product-img">
+                <span class="product-brand">Skymsen</span>
+                <span class="product-badge badge-green" data-i18n="badge_delivery">Entrega Imediata</span>
+                <img src="https://images.unsplash.com/photo-1628191010210-a59de33e5941?auto=format&fit=crop&w=500&q=80" alt="Batedeira">
+            </div>
+            <div class="product-body">
+                <h3 data-i18n="prod_3_title">Batedeira Planetária 12L</h3>
+                <p data-i18n="prod_3_desc">Perfeita para massas leves, bolos e glacês. Motor de alta durabilidade.</p>
+                <a href="https://wa.me/5511999999999" class="btn-outline-whatsapp">
+                    <span data-i18n="btn_consult">Consultar Valor</span> ➔
+                </a>
+            </div>
         </div>
-
     </div>
 </section>
 
-<!-- LOCALIZAÇÃO -->
+<!-- GALERIA (Novo) -->
+<section class="gallery" id="gallery">
+    <div class="section-head">
+        <h2 data-i18n="gallery_title">Equipamentos Reparados</h2>
+        <p class="subtitle" data-i18n="gallery_subtitle">
+            Trabalhos reais realizados em nossa oficina
+        </p>
+    </div>
+
+    <div class="gallery-grid">
+
+        <img src="logo/1.jpeg" class="gallery-img" alt="Equipo reparado 1">
+        <img src="logo/2.jpeg" class="gallery-img" alt="Equipo reparado 2">
+        <img src="logo/3.jpeg" class="gallery-img" alt="Equipo reparado 3">
+        <img src="logo/4.jpeg" class="gallery-img" alt="Equipo reparado 4">
+        <img src="logo/5.jpeg" class="gallery-img" alt="Equipo reparado 5">
+        <img src="logo/6.jpeg" class="gallery-img" alt="Equipo reparado 6">
+        <img src="logo/7.jpeg" class="gallery-img" alt="Equipo reparado 7">
+
+    </div>
+</section>
+<!-- LOCALIZAÇÃO / MAPA MEJORADO -->
 <section class="location" id="location">
-    <div class="location-container">
+    <div class="location-wrapper">
+        <div class="contact-card">
+            <h2 data-i18n="location_title">Visite Nossa Oficina</h2>
+            <p data-i18n="location_desc">Traga seu equipamento ou agende uma visita técnica em seu estabelecimento.</p>
 
-        <div class="contact-info">
-            <h2 data-i18n="location_title">Onde Estamos</h2>
-            <p data-i18n="location_desc">
-                Venha conhecer nossa oficina
-            </p>
-
-            <div class="info-item">
-                <strong>📍 Endereço</strong>
-                <p>São Paulo - SP</p>
-            </div>
-
-            <div class="info-item">
-                <strong>⏰ Horário</strong>
-                <p>Segunda a Sexta</p>
-            </div>
-
-            <div class="info-item">
-                <strong>📞 Contato</strong>
-                <p>(11) 99999-9999</p>
+            <div class="info-list">
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <strong data-i18n="loc_address_title">Endereço</strong>
+                        <p>Rua Mirassol D'Oeste, 3b - Jardim das Camelias, São Paulo - SP</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">⏰</div>
+                    <div>
+                        <strong data-i18n="loc_hours_title">Horário</strong>
+                        <p data-i18n="loc_hours">Seg a Sex: 08:00 - 18:00</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <strong data-i18n="loc_contact_title">Contato</strong>
+                        <p>(11) 93180-1141</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div class="map-container">
-            <iframe src="https://www.google.com/maps?q=São Paulo&output=embed"></iframe>
-        </div>
-
+        
+        <!-- Mapa de fondo -->
+       <div class="map-bg">
+    <iframe 
+        src="https://www.google.com/maps?q=Tv.%20Rua%20Mirassol%20d'Oeste,%203%20São%20Paulo&output=embed"
+        loading="lazy"
+        style="border:0; width:100%; height:100%;">
+    </iframe>
+</div>
     </div>
 </section>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Arevalo Manutenção - São Paulo, SP. Todos os direitos reservados.</p>
-    </footer>
+<footer>
+    <div class="footer-content">
+        <p data-i18n="footer_text">© 2026 Arevalo Manutenção. Representante autorizado multimarcas em São Paulo.</p>
+    </div>
+</footer>
 
-    <!-- JS -->
-    <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

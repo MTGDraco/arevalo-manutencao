@@ -1,61 +1,136 @@
+// 1. Diccionario Completo
 const translations = {
     pt: {
+        logo_sub: "Manutenção",
         nav_home: "Início",
         nav_services: "Serviços",
         nav_products: "Produtos",
+        nav_gallery: "Estrutura",
         nav_contact: "Contato",
+        
+        hero_badge: "Especialistas Autorizados",
+        hero_title: "Venda e Manutenção de Equipamentos Gastronômicos",
+        hero_desc: "Soluções completas para padarias, restaurantes e açougues. Trabalhamos com as melhores marcas do mercado.",
+        hero_btn: "Solicite um Orçamento",
 
-        hero_title: "Venda, Reforma e Manutenção de Equipamentos Gastronômicos",
-        hero_desc: "Especialistas em São Paulo. Soluções completas para padarias, restaurantes e açougues.",
-        hero_btn: "Solicite um Orçamento no WhatsApp",
-
+        brands_title: "Trabalhamos com as melhores marcas:",
+        
         services_title: "Nossas Especialidades",
-        services_subtitle: "Trabalhamos com conserto, reforma completa e venda dos seguintes equipamentos:",
+        services_subtitle: "Assistência técnica ágil e de qualidade",
+        srv_1: "Amassadeiras e Cilindros",
+        srv_2: "Modeladoras de Pão",
+        srv_3: "Fornos Industriais",
+        srv_4: "Batedeiras Planetárias",
+        srv_5: "Moedores e Fatiadores",
 
-        location_title: "Onde Estamos",
-        location_desc: "Venha conhecer nossa oficina ou agende uma visita técnica.",
-        footer_text: "© 2026 Arevalo Manutenção - São Paulo, SP"
+        prod_kicker: "Catálogo",
+        prod_subtitle: "Equipamentos revisados, com garantia e prontos para uso",
+        badge_top: "Mais Vendido",
+        badge_new: "Novo",
+        badge_delivery: "Entrega Imediata",
+        prod_1_title: "Amassadeira Rápida 15kg",
+        prod_1_desc: "Alta performance para produção de massas pesadas. Totalmente revisada.",
+        prod_2_title: "Forno Turbo a Gás",
+        prod_2_desc: "Controle preciso de temperatura. Ideal para pão francês e confeitaria.",
+        prod_3_title: "Batedeira Planetária 12L",
+        prod_3_desc: "Perfeita para massas leves, bolos e glacês. Motor de alta durabilidade.",
+        btn_consult: "Consultar Valor",
+
+        gallery_title: "Nossa Estrutura e Serviços",
+        gallery_subtitle: "Conheça nossa oficina especializada",
+
+        location_title: "Visite Nossa Oficina",
+        location_desc: "Traga seu equipamento ou agende uma visita técnica em seu estabelecimento.",
+        loc_address_title: "Endereço",
+        loc_hours_title: "Horário",
+        loc_hours: "Seg a Sex: 08:00 - 18:00",
+        loc_contact_title: "Contato",
+
+        wa_float: "WhatsApp",
+        footer_text: "© 2026 Arevalo Manutenção. Representante autorizado multimarcas em São Paulo."
     },
 
     es: {
+        logo_sub: "Mantenimiento",
         nav_home: "Inicio",
         nav_services: "Servicios",
         nav_products: "Productos",
+        nav_gallery: "Instalaciones",
         nav_contact: "Contacto",
+        
+        hero_badge: "Especialistas Autorizados",
+        hero_title: "Venta y Mantenimiento de Equipos Gastronómicos",
+        hero_desc: "Soluciones completas para panaderías, restaurantes y carnicerías. Trabajamos con las mejores marcas.",
+        hero_btn: "Solicita tu Presupuesto",
 
-        hero_title: "Venta, Reparación y Mantenimiento de Equipos Gastronómicos",
-        hero_desc: "Especialistas en São Paulo. Soluciones completas para panaderías y restaurantes.",
-        hero_btn: "Solicita un Presupuesto por WhatsApp",
-
+        brands_title: "Trabajamos con las mejores marcas:",
+        
         services_title: "Nuestras Especialidades",
-        services_subtitle: "Trabajamos con reparación, restauración y venta de equipos:",
+        services_subtitle: "Servicio técnico ágil y de calidad",
+        srv_1: "Amasadoras y Cilindros",
+        srv_2: "Moldeadoras de Pan",
+        srv_3: "Hornos Industriales",
+        srv_4: "Batidoras Planetarias",
+        srv_5: "Picadoras y Cortadoras",
 
-        location_title: "Dónde Estamos",
-        location_desc: "Visítanos o agenda una visita técnica.",
-        footer_text: "© 2026 Arevalo Manutenção - São Paulo, SP"
+        prod_kicker: "Catálogo",
+        prod_subtitle: "Equipos revisados, con garantía y listos para usar",
+        badge_top: "Más Vendido",
+        badge_new: "Nuevo",
+        badge_delivery: "Entrega Inmediata",
+        prod_1_title: "Amasadora Rápida 15kg",
+        prod_1_desc: "Alto rendimiento para masas pesadas. Totalmente revisada.",
+        prod_2_title: "Horno Turbo a Gas",
+        prod_2_desc: "Control preciso de temperatura. Ideal para pan francés y repostería.",
+        prod_3_title: "Batidora Planetaria 12L",
+        prod_3_desc: "Perfecta para masas ligeras y pastelería. Motor de alta durabilidad.",
+        btn_consult: "Consultar Precio",
+
+        gallery_title: "Nuestras Instalaciones",
+        gallery_subtitle: "Conoce nuestro taller especializado",
+
+        location_title: "Visita Nuestro Taller",
+        location_desc: "Trae tu equipo o programa una visita técnica en tu establecimiento.",
+        loc_address_title: "Dirección",
+        loc_hours_title: "Horario",
+        loc_hours: "Lun a Vie: 08:00 - 18:00",
+        loc_contact_title: "Contacto",
+
+        wa_float: "WhatsApp",
+        footer_text: "© 2026 Arevalo Mantenimiento. Representante autorizado multimarca en São Paulo."
     }
 };
 
+// 2. Función de Traducción
 function changeLanguage(lang) {
     localStorage.setItem("lang", lang);
 
     document.querySelectorAll("[data-i18n]").forEach(el => {
         const key = el.getAttribute("data-i18n");
-        if (translations[lang][key]) {
+        if (translations[lang] && translations[lang][key]) {
             el.textContent = translations[lang][key];
         }
     });
 
-    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'es';
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'es-ES';
 }
 
-/* Cargar idioma guardado */
+// 3. Inicializar idioma al cargar
 document.addEventListener("DOMContentLoaded", () => {
     const savedLang = localStorage.getItem("lang") || "pt";
     changeLanguage(savedLang);
 });
 
-/* MENU MOBILE */
+// 4. Lógica Mejorada del Menú Móvil
+const navLinks = document.getElementById("navLinks");
+
 function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
+    navLinks.classList.toggle("active");
 }
+
+// Cerrar menú al hacer click
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
