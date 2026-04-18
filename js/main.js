@@ -36,8 +36,8 @@ const translations = {
         prod_3_desc: "Perfeita para massas leves, bolos e glacês. Motor de alta durabilidade.",
         btn_consult: "Consultar Valor",
 
-        gallery_title: "Nossa Estrutura e Serviços",
-        gallery_subtitle: "Conheça nossa oficina especializada",
+        gallery_title: "Equipamentos Reparados",
+        gallery_subtitle: "Trabalhos reais realizados em nossa oficina",
 
         location_title: "Visite Nossa Oficina",
         location_desc: "Traga seu equipamento ou agende uma visita técnica em seu estabelecimento.",
@@ -86,8 +86,8 @@ const translations = {
         prod_3_desc: "Perfecta para masas ligeras y pastelería. Motor de alta durabilidad.",
         btn_consult: "Consultar Precio",
 
-        gallery_title: "Nuestras Instalaciones",
-        gallery_subtitle: "Conoce nuestro taller especializado",
+        gallery_title: "Equipos Reparados",
+        gallery_subtitle: "Trabajos reales realizados en nuestro taller",
 
         location_title: "Visita Nuestro Taller",
         location_desc: "Trae tu equipo o programa una visita técnica en tu establecimiento.",
@@ -101,7 +101,6 @@ const translations = {
     }
 };
 
-// 2. Función de Traducción
 function changeLanguage(lang) {
     localStorage.setItem("lang", lang);
 
@@ -115,22 +114,53 @@ function changeLanguage(lang) {
     document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'es-ES';
 }
 
-// 3. Inicializar idioma al cargar
-document.addEventListener("DOMContentLoaded", () => {
-    const savedLang = localStorage.getItem("lang") || "pt";
-    changeLanguage(savedLang);
-});
-
-// 4. Lógica Mejorada del Menú Móvil
+// ================= MENU MOBILE =================
 const navLinks = document.getElementById("navLinks");
 
 function toggleMenu() {
     navLinks.classList.toggle("active");
 }
 
-// Cerrar menú al hacer click
+// cerrar al hacer click
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("active");
     });
+});
+
+// ================= SCROLL REVEAL PRO =================
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+// ================= SCROLL PROGRESS =================
+window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.body.scrollHeight - window.innerHeight;
+    const progress = scrollTop / docHeight;
+
+    document.body.style.setProperty("--scroll", progress);
+});
+
+// ================= PARALLAX HERO (SUAVE) =================
+window.addEventListener("scroll", () => {
+    const hero = document.querySelector(".hero");
+    if (!hero) return;
+
+    let offset = window.scrollY * 0.3;
+    hero.style.backgroundPosition = `center ${offset}px`;
+});
+
+// ================= INIT =================
+document.addEventListener("DOMContentLoaded", () => {
+    const savedLang = localStorage.getItem("lang") || "pt";
+    changeLanguage(savedLang);
 });
