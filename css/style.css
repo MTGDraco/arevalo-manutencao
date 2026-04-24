@@ -247,3 +247,12 @@ footer { background: var(--primary-color); color: #94A3B8; text-align: center; p
 
     .whatsapp-float { bottom: 20px; right: 20px; padding: 12px 20px; font-size: 0.95rem; }
 }
+
+/* Tamaño del icono de WhatsApp personalizado */
+.wa-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    /* Si tu icono original es verde, puedes poner el botón flotante en blanco para que resalte más, 
+       o dejarlo así si el icono de tu png es blanco */
+}
