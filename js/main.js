@@ -1,4 +1,3 @@
-// ================= DICCIONARIO COMPLETO (PT / ES) =================
 const translations = {
     pt: {
         logo_sub: "Manutenção",
@@ -31,24 +30,35 @@ const translations = {
         badge_delivery: "Entrega Imediata",
         
         // --- TEXTOS PERSUASIVOS DE PRODUCTOS ---
-        prod_1_title: "Amassadeira Espiral",
-        prod_2_title: "Forno Turbo a Gás",
-        prod_3_title: "Batedeira Planetária",
+        prod_1_title: "Forno Turbo a Gás/Elétrico",
+        prod_2_title: "Forno de Lastro",
+        prod_3_title: "Cilindro Sovador",
+        prod_4_title: "Divisora e Modeladora",
+        prod_5_title: "Divisora da Grano",
         
         feat_use: "Uso:",
         feat_sizes: "Tamanhos e Diferenças:",
+        feat_ben: "Vantagem:",
         
-        p1_use: "Massas pesadas (pão francês, pizza e salgados).",
-        p1_sizes: "De 15kg (ideal para iniciar) até 40kg (reduz o tempo de produção pela metade). O detalhe crucial? A de 40kg exige energia trifásica. Qual atende sua demanda?",
-        p1_ben: "Motor extra forte, aguenta o trabalho pesado sem aquecer a massa.",
+        p1_use: "Assamento rápido e padronizado de pães franceses, bolos e salgados.",
+        p1_sizes: "De 5 a 10 esteiras. O de 5 cabe em qualquer espaço; o de 10 dobra sua produção no horário de pico sem gastar o dobro de gás.",
+        p1_ben: "Trabalhamos com as gigantes (Progás, Tedesco, Ferri, Venâncio). Máximo isolamento térmico: calor no pão, não na sua cozinha.",
         
-        p2_use: "Assamento perfeito para pães, bolos e confeitaria.",
-        p2_sizes: "Modelos de 5 a 10 esteiras. O de 5 cabe em qualquer canto, mas o de 10 dobra sua fornada na hora do rush sem gastar o dobro de gás. Já calculou essa economia?",
-        p2_ben: "Isolamento térmico de ponta. Mantém o calor no pão, não na cozinha.",
+        p2_use: "Pães rústicos, artesanais, ciabattas, pizzas e massas que exigem chão de pedra.",
+        p2_sizes: "Módulos de 1, 2 ou 3 câmaras independentes. Asse um pão cascudo embaixo e um bolo delicado em cima ao mesmo tempo.",
+        p2_ben: "Controle perfeito de teto e lastro. É o segredo daquela crosta crocante que fideliza o cliente.",
         
-        p3_use: "Massas leves, cremes, glacês e chantilly.",
-        p3_sizes: "De 12L (o ponto de equilíbrio perfeito) até 20L (o trator da confeitaria). A diferença brutal está no torque: a de 20L bate massas de panetone sem 'chorar'.",
-        p3_ben: "Engrenagens de aço inox que não patinam nunca, garantindo aeração perfeita.",
+        p3_use: "Sovar e alisar massas pesadas com rapidez, garantindo o 'ponto de véu' perfeito.",
+        p3_sizes: "Rolos de 300mm a 500mm (monofásicos e trifásicos). O de 500mm reduz o esforço do padeiro em 40%.",
+        p3_ben: "Estrutura blindada e rolos em cromo duro. Não enferruja, não trava a massa e garante total segurança ao operador.",
+        
+        p4_use: "Divisão e modelagem padronizada, focada principalmente no pão francês.",
+        p4_sizes: "Corta até 30 pedaços perfeitamente iguais de uma só vez, eliminando a balança manual.",
+        p4_ben: "O maior ladrão de lucros da padaria é o pão com peso errado. Essa máquina padroniza seu produto e zera o desperdício.",
+
+        p5_use: "Divisão de massas super hidratadas e de fermentação natural.",
+        p5_sizes: "Ajuste milimétrico de peso para atender as exigências da panificação artesanal de alta qualidade.",
+        p5_ben: "A Ferrari das divisoras. Trata a massa com extrema suavidade, sem desgaseificar, mantendo os alvéolos perfeitos do pão.",
         
         btn_consult: "Consultar Valor",
 
@@ -97,24 +107,35 @@ const translations = {
         badge_delivery: "Entrega Inmediata",
         
         // --- TEXTOS PERSUASIVOS DE PRODUCTOS ---
-        prod_1_title: "Amasadora Espiral",
-        prod_2_title: "Horno Turbo a Gas",
-        prod_3_title: "Batidora Planetaria",
+        prod_1_title: "Horno Turbo a Gas/Eléctrico",
+        prod_2_title: "Horno de Piso (Lastro)",
+        prod_3_title: "Cilindro Sobador",
+        prod_4_title: "Divisora y Moldeadora",
+        prod_5_title: "Divisora de Grano",
         
         feat_use: "Uso:",
         feat_sizes: "Tamaños y Diferencias:",
+        feat_ben: "Ventaja:",
         
-        p1_use: "Masas pesadas (pan francés, pizza y empanadas).",
-        p1_sizes: "De 15kg (ideal para iniciar) hasta 40kg (reduce el tiempo a la mitad). ¿El detalle crucial? La de 40kg exige energía trifásica. ¿Cuál atiende tu demanda?",
-        p1_ben: "Motor extra fuerte, soporta el trabajo duro sin calentar la masa.",
+        p1_use: "Horneado rápido y estandarizado de panes, pasteles y bocadillos.",
+        p1_sizes: "De 5 a 10 bandejas. El de 5 cabe en cualquier espacio; el de 10 dobla tu producción en horas pico sin gastar el doble de gas.",
+        p1_ben: "Trabajamos con las gigantes (Progás, Tedesco, Ferri, Venâncio). Aislamiento térmico máximo: calor en el pan, no en tu cocina.",
         
-        p2_use: "Horneado perfecto para panes, pasteles y repostería.",
-        p2_sizes: "Modelos de 5 a 10 bandejas. El de 5 cabe en cualquier rincón, pero el de 10 dobla tu horneada en horas pico sin gastar el doble de gas. ¿Ya calculaste el ahorro?",
-        p2_ben: "Aislamiento térmico superior. Mantiene el calor en el pan, no en la cocina.",
+        p2_use: "Panes rústicos, artesanales, ciabattas, pizzas y masas que exigen suelo de piedra.",
+        p2_sizes: "Módulos de 1, 2 o 3 cámaras independientes. Hornea un pan rústico abajo y un pastel delicado arriba al mismo tiempo.",
+        p2_ben: "Control perfecto de techo y piso. Es el secreto de esa corteza crujiente que fideliza al cliente.",
         
-        p3_use: "Masas ligeras, cremas, glaseados y chantilly.",
-        p3_sizes: "De 12L (el equilibrio perfecto) hasta 20L (el tractor de repostería). La diferencia brutal está en el torque: la de 20L bate masas de pan dulce sin 'sufrir'.",
-        p3_ben: "Engranajes de acero inoxidable que no patinan nunca, garantizando aireación perfecta.",
+        p3_use: "Sobar y alisar masas pesadas con rapidez, garantizando el 'punto de velo' perfecto.",
+        p3_sizes: "Rodillos de 300mm a 500mm (monofásicos y trifásicos). El de 500mm reduce el esfuerzo del panadero en un 40%.",
+        p3_ben: "Estructura blindada y rodillos de cromo duro. No se oxida, no traba la masa y garantiza total seguridad al operador.",
+        
+        p4_use: "División y moldeado estandarizado, enfocado principalmente en el pan francés.",
+        p4_sizes: "Corta hasta 30 pedazos perfectamente iguales de una sola vez, eliminando la báscula manual.",
+        p4_ben: "El mayor ladrón de ganancias de la panadería es el pan con peso equivocado. Esta máquina estandariza tu producto y elimina el desperdicio.",
+
+        p5_use: "División de masas súper hidratadas y de fermentación natural.",
+        p5_sizes: "Ajuste milimétrico de peso para atender las exigencias de la panadería artesanal de alta calidad.",
+        p5_ben: "La Ferrari de las divisoras. Trata la masa con extrema suavidad, sin desgasificar, manteniendo los alvéolos perfectos del pan.",
         
         btn_consult: "Consultar Precio",
 
