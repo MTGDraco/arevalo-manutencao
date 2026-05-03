@@ -1,4 +1,4 @@
-// 1. Diccionario Completo
+// ================= DICCIONARIO COMPLETO (PT / ES) =================
 const translations = {
     pt: {
         logo_sub: "Manutenção",
@@ -14,6 +14,7 @@ const translations = {
         hero_btn: "Solicite um Orçamento",
 
         brands_title: "Trabalhamos com as melhores marcas:",
+        brands_secondary: "Também somos especialistas em:",
         
         services_title: "Nossas Especialidades",
         services_subtitle: "Assistência técnica ágil e de qualidade",
@@ -28,12 +29,27 @@ const translations = {
         badge_top: "Mais Vendido",
         badge_new: "Novo",
         badge_delivery: "Entrega Imediata",
-        prod_1_title: "Amassadeira Rápida 15kg",
-        prod_1_desc: "Alta performance para produção de massas pesadas. Totalmente revisada.",
+        
+        // --- TEXTOS PERSUASIVOS DE PRODUCTOS ---
+        prod_1_title: "Amassadeira Espiral",
         prod_2_title: "Forno Turbo a Gás",
-        prod_2_desc: "Controle preciso de temperatura. Ideal para pão francês e confeitaria.",
-        prod_3_title: "Batedeira Planetária 12L",
-        prod_3_desc: "Perfeita para massas leves, bolos e glacês. Motor de alta durabilidade.",
+        prod_3_title: "Batedeira Planetária",
+        
+        feat_use: "Uso:",
+        feat_sizes: "Tamanhos e Diferenças:",
+        
+        p1_use: "Massas pesadas (pão francês, pizza e salgados).",
+        p1_sizes: "De 15kg (ideal para iniciar) até 40kg (reduz o tempo de produção pela metade). O detalhe crucial? A de 40kg exige energia trifásica. Qual atende sua demanda?",
+        p1_ben: "Motor extra forte, aguenta o trabalho pesado sem aquecer a massa.",
+        
+        p2_use: "Assamento perfeito para pães, bolos e confeitaria.",
+        p2_sizes: "Modelos de 5 a 10 esteiras. O de 5 cabe em qualquer canto, mas o de 10 dobra sua fornada na hora do rush sem gastar o dobro de gás. Já calculou essa economia?",
+        p2_ben: "Isolamento térmico de ponta. Mantém o calor no pão, não na cozinha.",
+        
+        p3_use: "Massas leves, cremes, glacês e chantilly.",
+        p3_sizes: "De 12L (o ponto de equilíbrio perfeito) até 20L (o trator da confeitaria). A diferença brutal está no torque: a de 20L bate massas de panetone sem 'chorar'.",
+        p3_ben: "Engrenagens de aço inox que não patinam nunca, garantindo aeração perfeita.",
+        
         btn_consult: "Consultar Valor",
 
         gallery_title: "Equipamentos Reparados",
@@ -64,6 +80,7 @@ const translations = {
         hero_btn: "Solicita tu Presupuesto",
 
         brands_title: "Trabajamos con las mejores marcas:",
+        brands_secondary: "También somos especialistas en:",
         
         services_title: "Nuestras Especialidades",
         services_subtitle: "Servicio técnico ágil y de calidad",
@@ -78,12 +95,27 @@ const translations = {
         badge_top: "Más Vendido",
         badge_new: "Nuevo",
         badge_delivery: "Entrega Inmediata",
-        prod_1_title: "Amasadora Rápida 15kg",
-        prod_1_desc: "Alto rendimiento para masas pesadas. Totalmente revisada.",
+        
+        // --- TEXTOS PERSUASIVOS DE PRODUCTOS ---
+        prod_1_title: "Amasadora Espiral",
         prod_2_title: "Horno Turbo a Gas",
-        prod_2_desc: "Control preciso de temperatura. Ideal para pan francés y repostería.",
-        prod_3_title: "Batidora Planetaria 12L",
-        prod_3_desc: "Perfecta para masas ligeras y pastelería. Motor de alta durabilidad.",
+        prod_3_title: "Batidora Planetaria",
+        
+        feat_use: "Uso:",
+        feat_sizes: "Tamaños y Diferencias:",
+        
+        p1_use: "Masas pesadas (pan francés, pizza y empanadas).",
+        p1_sizes: "De 15kg (ideal para iniciar) hasta 40kg (reduce el tiempo a la mitad). ¿El detalle crucial? La de 40kg exige energía trifásica. ¿Cuál atiende tu demanda?",
+        p1_ben: "Motor extra fuerte, soporta el trabajo duro sin calentar la masa.",
+        
+        p2_use: "Horneado perfecto para panes, pasteles y repostería.",
+        p2_sizes: "Modelos de 5 a 10 bandejas. El de 5 cabe en cualquier rincón, pero el de 10 dobla tu horneada en horas pico sin gastar el doble de gas. ¿Ya calculaste el ahorro?",
+        p2_ben: "Aislamiento térmico superior. Mantiene el calor en el pan, no en la cocina.",
+        
+        p3_use: "Masas ligeras, cremas, glaseados y chantilly.",
+        p3_sizes: "De 12L (el equilibrio perfecto) hasta 20L (el tractor de repostería). La diferencia brutal está en el torque: la de 20L bate masas de pan dulce sin 'sufrir'.",
+        p3_ben: "Engranajes de acero inoxidable que no patinan nunca, garantizando aireación perfecta.",
+        
         btn_consult: "Consultar Precio",
 
         gallery_title: "Equipos Reparados",

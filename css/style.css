@@ -153,6 +153,26 @@ section { padding: 100px 5%; max-width: 1200px; margin: auto; }
 .btn-outline-whatsapp { margin-top: auto; display: flex; justify-content: center; align-items: center; gap: 8px; padding: 14px 20px; background: transparent; color: var(--secondary-color); border-radius: 12px; text-decoration: none; font-weight: 700; border: 2px solid var(--secondary-color); transition: all 0.3s; }
 .btn-outline-whatsapp:hover { background: var(--secondary-color); color: white; box-shadow: 0 5px 15px rgba(5, 150, 105, 0.2); }
 .btn-outline-whatsapp:active { transform: scale(0.97); }
+/* ================= ESPECIFICACIONES DE PRODUCTOS ================= */
+.product-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+    background: rgba(0, 0, 0, 0.03);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+.product-features p {
+    margin-bottom: 0 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+    color: var(--text-main) !important;
+}
+.product-features strong {
+    color: var(--primary-color);
+}
 
 /* ================= GALERIA ================= */
 .gallery { padding: 80px 5%; background: var(--surface-color); }
