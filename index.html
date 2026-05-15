@@ -2,309 +2,411 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0B132B">
+    <meta name="format-detection" content="telephone=yes">
+
     <title>Arevalo Manutenção | Conserto de Equipamentos Gastronômicos</title>
     <meta name="description" content="Especialistas em conserto, reforma e venda de amassadeiras, fornos e equipamentos gastronômicos em São Paulo. Representamos G.Paniz, Gastromaq, Ferri e mais.">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-      <a href="https://wa.me/5511931801141" class="whatsapp-float pulse-anim"  >
-         <img src="logo/whatsapp.png" alt="WhatsApp" class="wa-icon"> 
-         
+    <a href="https://wa.me/5511931801141?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento" class="whatsapp-float pulse-anim" aria-label="Falar com Arevalo Manutenção pelo WhatsApp">
+        <img src="logo/whatsapp.png" alt="" class="wa-icon" loading="eager">
+        <span class="wa-label" data-i18n="wa_float">WhatsApp</span>
     </a>
 
-    <header class="navbar glass">
+    <header class="navbar glass" data-navbar>
         <div class="nav-container">
-            <div class="logo">
+            <a href="#home" class="logo" aria-label="Arevalo Manutenção - Início">
                 <img src="logo/Logo.png" alt="Arevalo Manutenção" class="logo-img" onerror="this.style.display='none'">
-                <div class="logo-text">
+                <span class="logo-text">
                     <strong>Arevalo</strong>
                     <span data-i18n="logo_sub">Manutenção</span>
-                </div>
-            </div>
+                </span>
+            </a>
 
             <div class="nav-actions-mobile">
-                <div class="lang-switch mobile-only">
-                    <button onclick="changeLanguage('pt')">🇧🇷</button>
-                    <button onclick="changeLanguage('es')">🇪🇸</button>
+                <div class="lang-switch mobile-only" aria-label="Escolher idioma">
+                    <button type="button" data-lang="pt" aria-label="Português">🇧🇷</button>
+                    <button type="button" data-lang="es" aria-label="Español">🇪🇸</button>
                 </div>
-                <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+                <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="navLinks" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
 
-            <nav class="nav-links glass-mobile" id="navLinks">
-                <a href="#" data-i18n="nav_home">Início</a>
+            <nav class="nav-links glass-mobile" id="navLinks" aria-label="Menu principal">
+                <a href="#home" data-i18n="nav_home">Início</a>
                 <a href="#services" data-i18n="nav_services">Serviços</a>
                 <a href="#products" data-i18n="nav_products">Produtos</a>
                 <a href="#gallery" data-i18n="nav_gallery">Estrutura</a>
+                <a href="#social" data-i18n="nav_social">Redes</a>
                 <a href="#location" data-i18n="nav_contact">Contato</a>
             </nav>
 
             <div class="nav-actions desktop-only">
-                <div class="lang-switch">
-                    <button onclick="changeLanguage('pt')">🇧🇷</button>
-                    <button onclick="changeLanguage('es')">🇪🇸</button>
+                <div class="lang-switch" aria-label="Escolher idioma">
+                    <button type="button" data-lang="pt" aria-label="Português">🇧🇷</button>
+                    <button type="button" data-lang="es" aria-label="Español">🇪🇸</button>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="hero" style="background: url('logo/fondo.png') center/cover no-repeat;">
-        <div class="hero-overlay"></div>
-        <div class="hero-content reveal">
-            <span class="hero-badge glass-dark" data-i18n="hero_badge">Especialistas Autorizados</span>
-            <h1 data-i18n="hero_title">Venda e Manutenção de Equipamentos Gastronômicos</h1>
-            <p data-i18n="hero_desc">Soluções completas para padarias, restaurantes e açougues. Trabalhamos com as melhores marcas do mercado.</p>
-            <a href="https://wa.me/5511931801141" class="btn-primary">
-                💬 <span data-i18n="hero_btn">Solicite um Orçamento</span>
-            </a>
-        </div>
-    </section>
+    <main id="home">
+        <section class="hero" aria-label="Apresentação principal">
+            <div class="hero-bg" aria-hidden="true"></div>
+            <div class="hero-overlay" aria-hidden="true"></div>
 
-    <section class="brands reveal">
-        <p data-i18n="brands_title">Trabalhamos com as melhores marcas:</p>
-        <div class="brands-marquee">
-            <div class="brands-track">
-                <div class="brand-card"><img src="logo/ferri.jpeg" alt="Ferri"></div>
-                <div class="brand-card"><img src="logo/gas.jpeg" alt="Gastromaq"></div>
-                <div class="brand-card"><img src="logo/gpaniz.jpeg" alt="G.Paniz"></div>
-                <div class="brand-card"><img src="logo/pre.jpeg" alt="Perfecta"></div>
-                
-                <div class="brand-card"><img src="logo/ferri.jpeg" alt="Ferri"></div>
-                <div class="brand-card"><img src="logo/gas.jpeg" alt="Gastromaq"></div>
-                <div class="brand-card"><img src="logo/gpaniz.jpeg" alt="G.Paniz"></div>
-                <div class="brand-card"><img src="logo/pre.jpeg" alt="Perfecta"></div>
-            </div>
-        </div>
+            <div class="hero-content reveal">
+                <span class="hero-badge glass-dark" data-i18n="hero_badge">Especialistas Autorizados</span>
 
-        <p class="brands-secondary-title" data-i18n="brands_secondary">Também somos especialistas em:</p>
-        
-        <div class="brands-marquee">
-            <div class="brands-track track-reverse">
-                <span class="brand-pill glass">Grano</span>
-                <span class="brand-pill glass">Progreso</span>
-                <span class="brand-pill glass">Progás</span>
-                <span class="brand-pill glass">Superfecta</span>
-                <span class="brand-pill glass">Braesi</span>
-                <span class="brand-pill glass">Venâncio</span>
-                <span class="brand-pill glass">Prática</span>
-                <span class="brand-pill glass">Ramalho</span>
-                
-                <span class="brand-pill glass">Grano</span>
-                <span class="brand-pill glass">Progreso</span>
-                <span class="brand-pill glass">Progás</span>
-                <span class="brand-pill glass">Superfecta</span>
-                <span class="brand-pill glass">Braesi</span>
-                <span class="brand-pill glass">Venâncio</span>
-                <span class="brand-pill glass">Prática</span>
-                <span class="brand-pill glass">Ramalho</span>
-            </div>
-        </div>
-    </section>
+                <h1 data-i18n="hero_title">Venda e Manutenção de Equipamentos Gastronômicos</h1>
 
-    <section class="services reveal" id="services">
-        <h2 data-i18n="services_title">Nossas Especialidades</h2>
-        <p class="subtitle" data-i18n="services_subtitle">Assistência técnica ágil e de qualidade</p>
+                <p data-i18n="hero_desc">
+                    Soluções completas para padarias, restaurantes e açougues. Trabalhamos com as melhores marcas do mercado.
+                </p>
 
-        <div class="grid-container">
-            <div class="card"><div class="card-icon">🥖</div><h3 data-i18n="srv_1">Amassadeiras e Cilindros</h3></div>
-            <div class="card"><div class="card-icon">🥐</div><h3 data-i18n="srv_2">Modeladoras de Pão</h3></div>
-            <div class="card"><div class="card-icon">🔥</div><h3 data-i18n="srv_3">Fornos Industriais</h3></div>
-            <div class="card"><div class="card-icon">🎂</div><h3 data-i18n="srv_4">Batedeiras Planetárias</h3></div>
-            <div class="card"><div class="card-icon">🥩</div><h3 data-i18n="srv_5">Moedores e Fatiadores</h3></div>
-        </div>
-    </section>
+                <div class="hero-actions">
+                    <a href="https://wa.me/5511931801141?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento" class="btn-primary magnetic">
+                        <span aria-hidden="true">💬</span>
+                        <span data-i18n="hero_btn">Solicite um Orçamento</span>
+                    </a>
 
-   <section class="products reveal" id="products">
-        <div class="section-head">
-            <span class="section-kicker" data-i18n="prod_kicker">Catálogo</span>
-            <h2 data-i18n="nav_products">Equipamentos à Venda</h2>
-            <p data-i18n="prod_subtitle" class="subtitle">Equipamentos revisados, com garantia e prontos para uso</p>
-        </div>
-
-        <div class="product-grid swipe-mobile">
-            
-            <!-- PRODUCTO 1: FORNO TURBO -->
-            <div class="product-card">
-                <div class="product-img">
-                    <span class="product-brand glass-dark">Progás / Ferri / Venâncio</span>
-                    <span class="product-badge badge-blue glass" data-i18n="badge_top">Mais Vendido</span>
-                    <!-- Pon aquí la foto de tu Forno Turbo -->
-                    <img src="logo/i1.png" alt="Forno Turbo">
+                    <a href="#products" class="btn-ghost" data-i18n="hero_catalog">Ver Catálogo</a>
                 </div>
-                <div class="product-body">
-                    <h3 data-i18n="prod_1_title">Forno Turbo a Gás/Elétrico</h3>
-                    
-                    <div class="product-features">
-                        <p>🥐 <strong data-i18n="feat_use">Uso:</strong> <span data-i18n="p1_use">Assamento rápido e padronizado de pães franceses, bolos e salgados.</span></p>
-                        <p>📏 <strong data-i18n="feat_sizes">Tamanhos:</strong> <span data-i18n="p1_sizes">De 5 a 10 esteiras. O de 5 cabe em qualquer espaço; o de 10 dobra sua produção no horário de pico sem gastar o dobro de gás.</span></p>
-                        <p>⭐ <strong data-i18n="feat_ben">Vantagem:</strong> <span data-i18n="p1_ben">Trabalhamos com as gigantes (Progás, Tedesco, Ferri, Venâncio). Máximo isolamento térmico: calor no pão, não na sua cozinha.</span></p>
+            </div>
+        </section>
+
+        <section class="brands reveal" aria-label="Marcas atendidas">
+            <p data-i18n="brands_title">Trabalhamos com as melhores marcas:</p>
+
+            <div class="brands-marquee">
+                <div class="brands-track">
+                    <div class="brand-card"><img src="logo/ferri.jpeg" alt="Ferri" loading="lazy"></div>
+                    <div class="brand-card"><img src="logo/gas.jpeg" alt="Gastromaq" loading="lazy"></div>
+                    <div class="brand-card"><img src="logo/gpaniz.jpeg" alt="G.Paniz" loading="lazy"></div>
+                    <div class="brand-card"><img src="logo/pre.jpeg" alt="Perfecta" loading="lazy"></div>
+
+                    <div class="brand-card" aria-hidden="true"><img src="logo/ferri.jpeg" alt="" loading="lazy"></div>
+                    <div class="brand-card" aria-hidden="true"><img src="logo/gas.jpeg" alt="" loading="lazy"></div>
+                    <div class="brand-card" aria-hidden="true"><img src="logo/gpaniz.jpeg" alt="" loading="lazy"></div>
+                    <div class="brand-card" aria-hidden="true"><img src="logo/pre.jpeg" alt="" loading="lazy"></div>
+                </div>
+            </div>
+
+            <p class="brands-secondary-title" data-i18n="brands_secondary">Também somos especialistas em:</p>
+
+            <div class="brands-marquee">
+                <div class="brands-track track-reverse">
+                    <span class="brand-pill glass">Grano</span>
+                    <span class="brand-pill glass">Progreso</span>
+                    <span class="brand-pill glass">Progás</span>
+                    <span class="brand-pill glass">Superfecta</span>
+                    <span class="brand-pill glass">Braesi</span>
+                    <span class="brand-pill glass">Venâncio</span>
+                    <span class="brand-pill glass">Prática</span>
+                    <span class="brand-pill glass">Ramalho</span>
+
+                    <span class="brand-pill glass" aria-hidden="true">Grano</span>
+                    <span class="brand-pill glass" aria-hidden="true">Progreso</span>
+                    <span class="brand-pill glass" aria-hidden="true">Progás</span>
+                    <span class="brand-pill glass" aria-hidden="true">Superfecta</span>
+                    <span class="brand-pill glass" aria-hidden="true">Braesi</span>
+                    <span class="brand-pill glass" aria-hidden="true">Venâncio</span>
+                    <span class="brand-pill glass" aria-hidden="true">Prática</span>
+                    <span class="brand-pill glass" aria-hidden="true">Ramalho</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="services reveal" id="services">
+            <h2 data-i18n="services_title">Nossas Especialidades</h2>
+            <p class="subtitle" data-i18n="services_subtitle">Assistência técnica ágil e de qualidade</p>
+
+            <div class="grid-container">
+                <article class="card">
+                    <div class="card-icon">🥖</div>
+                    <h3 data-i18n="srv_1">Amassadeiras e Cilindros</h3>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🥐</div>
+                    <h3 data-i18n="srv_2">Modeladoras de Pão</h3>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🔥</div>
+                    <h3 data-i18n="srv_3">Fornos Industriais</h3>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🎂</div>
+                    <h3 data-i18n="srv_4">Batedeiras Planetárias</h3>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🥩</div>
+                    <h3 data-i18n="srv_5">Moedores e Fatiadores</h3>
+                </article>
+            </div>
+        </section>
+
+        <section class="products reveal" id="products">
+            <div class="section-head">
+                <span class="section-kicker" data-i18n="prod_kicker">Catálogo</span>
+                <h2 data-i18n="nav_products">Equipamentos à Venda</h2>
+                <p data-i18n="prod_subtitle" class="subtitle">Equipamentos revisados, com garantia e prontos para uso</p>
+            </div>
+
+            <div class="mobile-hint" data-i18n="mobile_hint">Deslize para ver mais →</div>
+
+            <div class="product-grid swipe-mobile" data-swipe>
+                <article class="product-card">
+                    <div class="product-img">
+                        <span class="product-brand glass-dark">Progás / Ferri / Venâncio</span>
+                        <span class="product-badge badge-blue glass" data-i18n="badge_top">Mais Vendido</span>
+                        <img src="logo/i1.png" alt="Forno Turbo" loading="lazy">
                     </div>
 
-                    <a href="https://wa.me/5511931801141" class="btn-outline-whatsapp">
-                        <span data-i18n="btn_consult">Consultar Valor</span> ➔
-                    </a>
-                </div>
-            </div>
+                    <div class="product-body">
+                        <h3 data-i18n="prod_1_title">Forno Turbo a Gás/Elétrico</h3>
 
-            <!-- PRODUCTO 2: FORNO DE LASTRO -->
-            <div class="product-card">
-                <div class="product-img">
-                    <span class="product-brand glass-dark">Lastro</span>
-                    <span class="product-badge badge-yellow glass" data-i18n="badge_new">Premium</span>
-                    <!-- Pon aquí la foto de tu Forno de Lastro -->
-                    <img src="logo/i2.png" alt="Forno de Lastro">
-                </div>
-                <div class="product-body">
-                    <h3 data-i18n="prod_2_title">Forno de Lastro</h3>
-                    
-                    <div class="product-features">
-                        <p>🍕 <strong data-i18n="feat_use">Uso:</strong> <span data-i18n="p2_use">Pães rústicos, artesanais, ciabattas, pizzas e massas que exigem chão de pedra.</span></p>
-                        <p>📏 <strong data-i18n="feat_sizes">Tamanhos:</strong> <span data-i18n="p2_sizes">Módulos de 1, 2 ou 3 câmaras independentes. Asse um pão cascudo embaixo e um bolo delicado em cima ao mesmo tempo.</span></p>
-                        <p>⭐ <strong data-i18n="feat_ben">Vantagem:</strong> <span data-i18n="p2_ben">Controle perfeito de teto e lastro. É o segredo daquela crosta crocante que fideliza o cliente.</span></p>
+                        <div class="product-features">
+                            <p>🥐 <strong data-i18n="feat_use">Uso:</strong> <span data-i18n="p1_use">Assamento rápido e padronizado de pães franceses, bolos e salgados.</span></p>
+                            <p>📏 <strong data-i18n="feat_sizes">Tamanhos:</strong> <span data-i18n="p1_sizes">De 5 a 10 esteiras. O de 5 cabe em qualquer espaço; o de 10 dobra sua produção no horário de pico sem gastar o dobro de gás.</span></p>
+                            <p>⭐ <strong data-i18n="feat_ben">Vantagem:</strong> <span data-i18n="p1_ben">Trabalhamos com as gigantes (Progás, Tedesco, Ferri, Venâncio). Máximo isolamento térmico: calor no pão, não na sua cozinha.</span></p>
+                        </div>
+
+                        <a href="https://wa.me/5511931801141?text=Ol%C3%A1%2C%20quero%20saber%20o%20valor%20do%20Forno%20Turbo" class="btn-outline-whatsapp">
+                            <span data-i18n="btn_consult">Consultar Valor</span> ➔
+                        </a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <span class="product-brand glass-dark">Lastro</span>
+                        <span class="product-badge badge-yellow glass" data-i18n="badge_new">Premium</span>
+                        <img src="logo/i2.png" alt="Forno de Lastro" loading="lazy">
                     </div>
 
-                    <a href="https://wa.me/5511931801141" class="btn-outline-whatsapp">
-                        <span data-i18n="btn_consult">Consultar Valor</span> ➔
-                    </a>
-                </div>
-            </div>
+                    <div class="product-body">
+                        <h3 data-i18n="prod_2_title">Forno de Lastro</h3>
 
-            <!-- PRODUCTO 3: CILINDRO -->
-            <div class="product-card">
-                <div class="product-img">
-                    <span class="product-brand glass-dark">Panificação</span>
-                    <span class="product-badge badge-green glass" data-i18n="badge_delivery">Entrega Imediata</span>
-                    <!-- Pon aquí la foto de tu Cilindro -->
-                    <img src="logo/i3.png" alt="Cilindro Sovador">
-                </div>
-                <div class="product-body">
-                    <h3 data-i18n="prod_3_title">Cilindro Sovador</h3>
-                    
-                    <div class="product-features">
-                        <p>🍞 <strong data-i18n="feat_use">Uso:</strong> <span data-i18n="p3_use">Sovar e alisar massas pesadas com rapidez, garantindo o "ponto de véu" perfeito.</span></p>
-                        <p>📏 <strong data-i18n="feat_sizes">Tamanhos:</strong> <span data-i18n="p3_sizes">Rolos de 300mm a 500mm (monofásicos e trifásicos). O de 500mm reduz o esforço do padeiro em 40%.</span></p>
-                        <p>⭐ <strong data-i18n="feat_ben">Vantagem:</strong> <span data-i18n="p3_ben">Estrutura blindada e rolos em cromo duro. Não enferruja, não trava a massa e garante total segurança ao operador.</span></p>
+                        <div class="product-features">
+                            <p>🍕 <strong data-i18n="feat_use">Uso:</strong> <span data-i18n="p2_use">Pães rústicos, artesanais, ciabattas, pizzas e massas que exigem chão de pedra.</span></p>
+                            <p>📏 <strong data-i18n="feat_sizes">Tamanhos:</strong> <span data-i18n="p2_sizes">Módulos de 1, 2 ou 3 câmaras independentes. Asse um pão cascudo embaixo e um bolo delicado em cima ao mesmo tempo.</span></p>
+                            <p>⭐ <strong data-i18n="feat_ben">Vantagem:</strong> <span data-i18n="p2_ben">Controle perfeito de teto e lastro. É o segredo daquela crosta crocante que fideliza o cliente.</span></p>
+                        </div>
+
+                        <a href="https://wa.me/5511931801141?text=Ol%C3%A1%2C%20quero%20saber%20o%20valor%20do%20Forno%20de%20Lastro" class="btn-outline-whatsapp">
+                            <span data-i18n="btn_consult">Consultar Valor</span> ➔
+                        </a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <span class="product-brand glass-dark">Panificação</span>
+                        <span class="product-badge badge-green glass" data-i18n="badge_delivery">Entrega Imediata</span>
+                        <img src="logo/i3.png" alt="Cilindro Sovador" loading="lazy">
                     </div>
 
-                    <a href="https://wa.me/5511931801141" class="btn-outline-whatsapp">
-                        <span data-i18n="btn_consult">Consultar Valor</span> ➔
-                    </a>
-                </div>
-            </div>
+                    <div class="product-body">
+                        <h3 data-i18n="prod_3_title">Cilindro Sovador</h3>
 
-            <!-- PRODUCTO 4: DIVISORA MODELADORA -->
-            <div class="product-card">
-                <div class="product-img">
-                    <span class="product-brand glass-dark">Modelagem</span>
-                    <span class="product-badge badge-blue glass" data-i18n="badge_top">Lucratividade</span>
-                    <!-- Pon aquí la foto de tu Divisora Modeladora -->
-                    <img src="logo/i4.png" alt="Divisora Modeladora">
-                </div>
-                <div class="product-body">
-                    <h3 data-i18n="prod_4_title">Divisora e Modeladora</h3>
-                    
-                    <div class="product-features">
-                        <p>🥖 <strong data-i18n="feat_use">Uso:</strong> <span data-i18n="p4_use">Divisão e modelagem padronizada, focada principalmente no pão francês.</span></p>
-                        <p>📏 <strong data-i18n="feat_sizes">Tamanhos:</strong> <span data-i18n="p4_sizes">Corta até 30 pedaços perfeitamente iguais de uma só vez, eliminando a balança manual.</span></p>
-                        <p>⭐ <strong data-i18n="feat_ben">Vantagem:</strong> <span data-i18n="p4_ben">O maior ladrão de lucros da padaria é o pão com peso errado. Essa máquina padroniza seu produto e zera o desperdício.</span></p>
+                        <div class="product-features">
+                            <p>🍞 <strong data-i18n="feat_use">Uso:</strong> <span data-i18n="p3_use">Sovar e alisar massas pesadas com rapidez, garantindo o "ponto de véu" perfeito.</span></p>
+                            <p>📏 <strong data-i18n="feat_sizes">Tamanhos:</strong> <span data-i18n="p3_sizes">Rolos de 300mm a 500mm (monofásicos e trifásicos). O de 500mm reduz o esforço do padeiro em 40%.</span></p>
+                            <p>⭐ <strong data-i18n="feat_ben">Vantagem:</strong> <span data-i18n="p3_ben">Estrutura blindada e rolos em cromo duro. Não enferruja, não trava a massa e garante total segurança ao operador.</span></p>
+                        </div>
+
+                        <a href="https://wa.me/5511931801141?text=Ol%C3%A1%2C%20quero%20saber%20o%20valor%20do%20Cilindro%20Sovador" class="btn-outline-whatsapp">
+                            <span data-i18n="btn_consult">Consultar Valor</span> ➔
+                        </a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <span class="product-brand glass-dark">Modelagem</span>
+                        <span class="product-badge badge-blue glass" data-i18n="badge_profit">Lucratividade</span>
+                        <img src="logo/i4.png" alt="Divisora Modeladora" loading="lazy">
                     </div>
 
-                    <a href="https://wa.me/5511931801141" class="btn-outline-whatsapp">
-                        <span data-i18n="btn_consult">Consultar Valor</span> ➔
-                    </a>
-                </div>
-            </div>
+                    <div class="product-body">
+                        <h3 data-i18n="prod_4_title">Divisora e Modeladora</h3>
 
-            <!-- PRODUCTO 5: DIVISORA GRANO -->
-            <div class="product-card">
-                <div class="product-img">
-                    <span class="product-brand glass-dark">Grano</span>
-                    <span class="product-badge badge-yellow glass" data-i18n="badge_new">Artesanal</span>
-                    <!-- Pon aquí la foto de tu Divisora Grano -->
-                    <img src="logo/i5.png" alt="Divisora Grano">
-                </div>
-                <div class="product-body">
-                    <h3 data-i18n="prod_5_title">Divisora da Grano</h3>
-                    
-                    <div class="product-features">
-                        <p>🌾 <strong data-i18n="feat_use">Uso:</strong> <span data-i18n="p5_use">Divisão de massas super hidratadas e de fermentação natural.</span></p>
-                        <p>📏 <strong data-i18n="feat_sizes">Tamanhos:</strong> <span data-i18n="p5_sizes">Ajuste milimétrico de peso para atender as exigências da panificação artesanal de alta qualidade.</span></p>
-                        <p>⭐ <strong data-i18n="feat_ben">Vantagem:</strong> <span data-i18n="p5_ben">A Ferrari das divisoras. Trata a massa com extrema suavidade, sem desgaseificar, mantendo os alvéolos perfeitos do pão.</span></p>
+                        <div class="product-features">
+                            <p>🥖 <strong data-i18n="feat_use">Uso:</strong> <span data-i18n="p4_use">Divisão e modelagem padronizada, focada principalmente no pão francês.</span></p>
+                            <p>📏 <strong data-i18n="feat_sizes">Tamanhos:</strong> <span data-i18n="p4_sizes">Corta até 30 pedaços perfeitamente iguais de uma só vez, eliminando a balança manual.</span></p>
+                            <p>⭐ <strong data-i18n="feat_ben">Vantagem:</strong> <span data-i18n="p4_ben">O maior ladrão de lucros da padaria é o pão com peso errado. Essa máquina padroniza seu produto e zera o desperdício.</span></p>
+                        </div>
+
+                        <a href="https://wa.me/5511931801141?text=Ol%C3%A1%2C%20quero%20saber%20o%20valor%20da%20Divisora%20e%20Modeladora" class="btn-outline-whatsapp">
+                            <span data-i18n="btn_consult">Consultar Valor</span> ➔
+                        </a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-img">
+                        <span class="product-brand glass-dark">Grano</span>
+                        <span class="product-badge badge-yellow glass" data-i18n="badge_artisan">Artesanal</span>
+                        <img src="logo/i5.png" alt="Divisora Grano" loading="lazy">
                     </div>
 
-                    <a href="https://wa.me/5511931801141" class="btn-outline-whatsapp">
-                        <span data-i18n="btn_consult">Consultar Valor</span> ➔
-                    </a>
-                </div>
+                    <div class="product-body">
+                        <h3 data-i18n="prod_5_title">Divisora da Grano</h3>
+
+                        <div class="product-features">
+                            <p>🌾 <strong data-i18n="feat_use">Uso:</strong> <span data-i18n="p5_use">Divisão de massas super hidratadas e de fermentação natural.</span></p>
+                            <p>📏 <strong data-i18n="feat_sizes">Tamanhos:</strong> <span data-i18n="p5_sizes">Ajuste milimétrico de peso para atender as exigências da panificação artesanal de alta qualidade.</span></p>
+                            <p>⭐ <strong data-i18n="feat_ben">Vantagem:</strong> <span data-i18n="p5_ben">A Ferrari das divisoras. Trata a massa com extrema suavidade, sem desgaseificar, mantendo os alvéolos perfeitos do pão.</span></p>
+                        </div>
+
+                        <a href="https://wa.me/5511931801141?text=Ol%C3%A1%2C%20quero%20saber%20o%20valor%20da%20Divisora%20da%20Grano" class="btn-outline-whatsapp">
+                            <span data-i18n="btn_consult">Consultar Valor</span> ➔
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="gallery reveal" id="gallery">
+            <div class="section-head">
+                <h2 data-i18n="gallery_title">Equipamentos Reparados</h2>
+                <p class="subtitle" data-i18n="gallery_subtitle">Trabalhos reais realizados em nossa oficina</p>
             </div>
 
-        </div>
-    </section>
+            <div class="mobile-hint" data-i18n="mobile_hint">Deslize para ver mais →</div>
 
-    <section class="gallery reveal" id="gallery">
-        <div class="section-head">
-            <h2 data-i18n="gallery_title">Equipamentos Reparados</h2>
-            <p class="subtitle" data-i18n="gallery_subtitle">Trabalhos reais realizados em nossa oficina</p>
-        </div>
+            <div class="gallery-grid swipe-mobile" data-gallery>
+                <button class="gallery-item" type="button"><img src="logo/1.jpeg" class="gallery-img" alt="Equipo reparado 1" loading="lazy"></button>
+                <button class="gallery-item" type="button"><img src="logo/2.jpeg" class="gallery-img" alt="Equipo reparado 2" loading="lazy"></button>
+                <button class="gallery-item" type="button"><img src="logo/3.jpeg" class="gallery-img" alt="Equipo reparado 3" loading="lazy"></button>
+                <button class="gallery-item" type="button"><img src="logo/4.jpeg" class="gallery-img" alt="Equipo reparado 4" loading="lazy"></button>
+                <button class="gallery-item" type="button"><img src="logo/5.jpeg" class="gallery-img" alt="Equipo reparado 5" loading="lazy"></button>
+                <button class="gallery-item" type="button"><img src="logo/6.jpeg" class="gallery-img" alt="Equipo reparado 6" loading="lazy"></button>
+                <button class="gallery-item" type="button"><img src="logo/7.jpeg" class="gallery-img" alt="Equipo reparado 7" loading="lazy"></button>
+            </div>
+        </section>
 
-        <div class="gallery-grid swipe-mobile">
-            <img src="logo/1.jpeg" class="gallery-img" alt="Equipo reparado 1">
-            <img src="logo/2.jpeg" class="gallery-img" alt="Equipo reparado 2">
-            <img src="logo/3.jpeg" class="gallery-img" alt="Equipo reparado 3">
-            <img src="logo/4.jpeg" class="gallery-img" alt="Equipo reparado 4">
-            <img src="logo/5.jpeg" class="gallery-img" alt="Equipo reparado 5">
-            <img src="logo/6.jpeg" class="gallery-img" alt="Equipo reparado 6">
-            <img src="logo/7.jpeg" class="gallery-img" alt="Equipo reparado 7">
-        </div>
-    </section>
+        <section class="social-section reveal" id="social">
+            <div class="section-head">
+                <span class="section-kicker" data-i18n="social_kicker">Conecte-se</span>
+                <h2 data-i18n="social_title">Acompanhe Nosso Trabalho</h2>
+                <p class="subtitle" data-i18n="social_subtitle">
+                    Veja reparos, equipamentos disponíveis, bastidores da oficina e novidades.
+                </p>
+            </div>
 
-    <section class="location reveal" id="location">
-        <div class="location-wrapper">
-            <div class="contact-card glass">
-                <h2 data-i18n="location_title">Visite Nossa Oficina</h2>
-                <p data-i18n="location_desc">Traga seu equipamento ou agende uma visita técnica em seu estabelecimento.</p>
+            <div class="social-grid">
+                <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-card facebook-card">
+                    <div class="social-icon">f</div>
+                    <div>
+                        <h3>Facebook</h3>
+                        <p data-i18n="social_facebook">Acompanhe novidades, promoções e equipamentos disponíveis.</p>
+                        <span data-i18n="social_visit">Visitar página</span>
+                    </div>
+                </a>
 
-                <div class="info-list">
-                    <div class="info-item">
-                        <div class="info-icon">📍</div>
-                        <div>
-                            <strong data-i18n="loc_address_title">Endereço</strong>
-                            <p>Rua Mirassol D'Oeste, 3b - Jardim das Camelias, SP</p>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" class="social-card instagram-card">
+                    <div class="social-icon">◎</div>
+                    <div>
+                        <h3>Instagram</h3>
+                        <p data-i18n="social_instagram">Veja fotos reais, antes e depois, oficina e máquinas revisadas.</p>
+                        <span data-i18n="social_visit">Visitar perfil</span>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/5511931801141?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20Arevalo%20e%20quero%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer" class="social-card whatsapp-card">
+                    <div class="social-icon">☘</div>
+                    <div>
+                        <h3>WhatsApp</h3>
+                        <p data-i18n="social_whatsapp">Fale direto conosco para orçamento, visita técnica ou compra.</p>
+                        <span data-i18n="social_send">Enviar mensagem</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="location reveal" id="location">
+            <div class="location-wrapper">
+                <div class="contact-card glass">
+                    <h2 data-i18n="location_title">Visite Nossa Oficina</h2>
+                    <p data-i18n="location_desc">Traga seu equipamento ou agende uma visita técnica em seu estabelecimento.</p>
+
+                    <div class="info-list">
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <strong data-i18n="loc_address_title">Endereço</strong>
+                                <p>Rua Mirassol D'Oeste, 3b - Jardim das Camelias, SP</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">⏰</div>
+                            <div>
+                                <strong data-i18n="loc_hours_title">Horário</strong>
+                                <p data-i18n="loc_hours">Seg a Sex: 08:00 - 18:00</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div>
+                                <strong data-i18n="loc_contact_title">Contato</strong>
+                                <p><a href="tel:+5511931801141">(11) 93180-1141</a></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="info-item">
-                        <div class="info-icon">⏰</div>
-                        <div>
-                            <strong data-i18n="loc_hours_title">Horário</strong>
-                            <p data-i18n="loc_hours">Seg a Sex: 08:00 - 18:00</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <div class="info-icon">📞</div>
-                        <div>
-                            <strong data-i18n="loc_contact_title">Contato</strong>
-                            <p>(11) 93180-1141</p>
-                        </div>
-                    </div>
+                </div>
+
+                <div class="map-bg">
+                    <iframe title="Mapa da Arevalo Manutenção" src="https://maps.google.com/maps?q=Rua+Mirassol+D'Oeste,+3b+-+Jardim+das+Camelias,+Sao+Paulo&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            
-            <div class="map-bg">
-                <iframe src="https://maps.google.com/maps?q=Rua+Mirassol+D'Oeste,+3b+-+Jardim+das+Camelias,+Sao+Paulo&t=&z=15&ie=UTF8&iwloc=&output=embed" loading="lazy" style="border:0; width:100%; height:100%;"></iframe>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer>
-        <div class="footer-content">
-            <p data-i18n="footer_text">© 2026 Arevalo Manutenção. Representante autorizado multimarcas em São Paulo.</p>
+    <footer class="premium-footer">
+        <div class="footer-content footer-grid">
+            <div>
+                <div class="footer-brand">
+                    <img src="logo/Logo.png" alt="Arevalo Manutenção" onerror="this.style.display='none'">
+                    <div>
+                        <strong>Arevalo</strong>
+                        <span data-i18n="logo_sub">Manutenção</span>
+                    </div>
+                </div>
+
+                <p data-i18n="footer_text">© 2026 Arevalo Manutenção. Representante autorizado multimarcas em São Paulo.</p>
+            </div>
+
+            <div class="footer-social">
+                <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+                <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+                <a href="https://wa.me/5511931801141" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">☘</a>
+            </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <button class="back-to-top" type="button" aria-label="Voltar ao topo">↑</button>
+
+    <script src="js/main.js" defer></script>
 </body>
 </html>
